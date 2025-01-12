@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -20,14 +20,14 @@
 
 <body class="bg-stone-100 text-stone-800">
     <!-- Header -->
-    <header class="bg-stone-200 shadow">
+    <header class="bg-stone-200 shadow sticky top-0 z-50">
         <div class="container mx-auto px-6 py-2 flex justify-between items-center">
             <!-- <h1 class="text-xl font-bold text-stone-800">Naomi Serkez</h1> -->
             <img src="assets\img\nslogo_nobg.png" alt="Naomi Serkez" class="w-12 h-12">
             <nav class="space-x-6">
                 <a href="#about" class="text-stone-600 hover:text-stone-900">About</a>
                 <a href="#projects" class="text-stone-600 hover:text-stone-900">Projects</a>
-                <a href="#contact" class="text-stone-600 hover:text-stone-900">Contact</a>
+                <a href="#contact" class="text-stone-600 hover:text-stone-900">More</a>
             </nav>
         </div>
     </header>
@@ -39,8 +39,8 @@
             <p class="text-stone-600 mt-4">I’m a software engineer, cyber enthusiast, and all around jack(iella?) of all
                 trades.</p>
             <a href="#projects"
-                class="mt-6 inline-block bg-orange-500 text-white py-2 px-6 rounded hover:bg-orange-600">View My
-                Work</a>
+                class="mt-6 inline-block bg-orange-500 text-white py-2 px-6 rounded hover:bg-orange-600">See What I've
+                Done</a>
         </div>
     </section>
 
@@ -60,41 +60,108 @@
     <section id="projects" class="bg-stone-50 py-20">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-stone-800 text-center">What I've Done</h2>
-            <div class="grid gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-3">
-                <!-- Project Card -->
-                <!-- for all images, ratio is 2:1 (width:height) -->
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img src="assets/img/essential_oil_background.jpeg" alt="Koena" class="w-full">
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg">Koena Health</h3>
-                        <p class="text-stone-600 mt-2">I created the website for a naturopathic company offering
-                            aromatherapy, health, and wellness workshops.</p>
-                        <a href="#" class="text-blue-500 hover:underline mt-2 block">Visit Koena</a>
+
+            <!-- Work Section -->
+            <div id="work" class="mt-12">
+                <h3 class="text-2xl font-semibold text-stone-800">Work</h3>
+                <div class="grid gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="assets/img/essential_oil_background.jpeg" alt="Koena" class="w-full">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg">Koena Health</h3>
+                            <p class="text-stone-600 mt-2">I created the website for a naturopathic company offering
+                                aromatherapy, health, and wellness workshops.</p>
+                            <a href="#" class="text-blue-500 hover:underline mt-2 block">Visit Koena</a>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="assets/img/acc.svg" alt="Art Center Canvas" class="w-full">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg">Intern at Art Center Canvas</h3>
+                            <p class="text-stone-600 mt-2">I supported customers with custom code and reports,
+                                implemented testing into a codebase and created new features with Vue.js.</p>
+                            <!-- <a href="https://artcentercanvas.com/" class="text-blue-500 hover:underline mt-2 inline-block">Visit Art Center Canvas</a> -->
+                            <a href="https://www.linkedin.com/in/naomiserkez/details/experience/"
+                                class="text-blue-500 hover:underline mt-2 inline-block">Learn More</a>
+                        </div>
                     </div>
                 </div>
-                <!-- <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img src="assets/img/essential_oil_background.jpeg" alt="Koena" class="w-full">
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg">Koena Health</h3>
-                        <p class="text-stone-600 mt-2">I created the website for a naturopathic company offering aromatherapy, health, and wellness workshops.</p>
-                        <a href="#" class="text-blue-500 hover:underline mt-2 block">Visit Koena</a>
-                    </div>
-                </div> -->
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img src="assets/img/polyomino1.jpeg" alt="Hackathon" class="w-full">
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg">Hack It Together Hackathon 2024</h3>
-                        <p class="text-stone-600 mt-2">My Team created a program to efficiently place 2-d polyomino
-                            shapes in a grid, minimizing extra space.</p>
-                        <a href="https://github.com/serkez/Hackathon_2024"
-                            class="text-blue-500 hover:underline mt-2 block">View Code</a>
-                    </div>
-                </div>
-                <!-- Add more project cards as needed -->
+                <!-- <button id="work-toggle" class="text-blue-500 hover:underline mt-4 block mx-auto">Show More</button>
+                <div id="work-extra" class="hidden">
+                     Additional Work items go here -->
+                <!-- </div> -->
             </div>
-            <!-- <a href="https://www.github.com/serkez"
+
+            <!-- Projects Section -->
+            <div id="projects" class="mt-12">
+                <h3 class="text-2xl font-semibold text-stone-800">Projects</h3>
+                <div class="grid gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="assets/img/polyomino1.jpeg" alt="Hackathon" class="w-full">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg">Hack It Together Hackathon 2024</h3>
+                            <p class="text-stone-600 mt-2">My Team created a program to efficiently place 2-d polyomino
+                                shapes in a grid, minimizing extra space.</p>
+                            <a href="https://github.com/serkez/Hackathon_2024"
+                                class="text-blue-500 hover:underline mt-2 block">View Code</a>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="assets/img/distributedsystem.jpeg" alt="Distributed System" class="w-full">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg">Distributed System Simulation</h3>
+                            <p class="text-stone-600 mt-2">A Java-based multithreaded simulation of a
+                                distributed system with communication between client, master, and worker
+                                programs over sockets.</p>
+                            <a href="" class="text-blue-500 hover:underline mt-2 block"></a>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="assets/img/recursion.jpeg" alt="NS" class="w-full">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg">Naomi's Website</h3>
+                            <p class="text-stone-600 mt-2">I created a portfolio website to show the work I've done and
+                                to tell you a bit about me.</p>
+                            <a href="#" class="text-blue-500 hover:underline mt-2 block" id="self-link">View Website</a>
+                        </div>
+                    </div>
+
+                </div>
+                <button id="projects-toggle" class="text-blue-500 hover:underline mt-4 block mx-auto">Show More</button>
+                <div id="projects-extra" class="hidden">
+                    <!-- Additional Project items go here -->
+                </div>
+            </div>
+
+            <!-- Continued Learning Section -->
+            <div id="education" class="mt-12">
+                <h3 class="text-2xl font-semibold text-stone-800">Continued Learning</h3>
+                <div class="grid gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="assets/img/thmcert.jpeg" alt="TryHackMe" class="w-full">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg">TryHackMe's 2024 Cyber Challenge</h3>
+                            <p class="text-stone-600 mt-2">I completed 24 tasks covering a wide array of security,
+                                networking, and pentesting topics, improving my cyber skills.</p>
+                            <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-GZIP2SW3CI.pdf"
+                                class="text-blue-500 hover:underline mt-2 block">View Certificate</a>
+                        </div>
+                    </div>
+                    <!--  Add up to 3 Continued Learning items
+                </div>
+                <button id="education-toggle" class="text-blue-500 hover:underline mt-4 block mx-auto">Show
+                    More</button>
+                <div id="education-extra" class="hidden">
+                     Additional Continued Learning items go here -->
+                    <!-- </div> -->
+                </div>
+            </div>
+    </section>
+    <!-- Add more project cards as needed -->
+    </div>
+    <!-- <a href="https://www.github.com/serkez"
                 class="mt-6 inline-block bg-orange-500 text-white py-2 px-6 rounded hover:bg-orange-600">See More</a> -->
-        </div>
+    </div>
     </section>
 
     <!-- Contact Section -->
@@ -103,14 +170,7 @@
             <h2 class="text-3xl font-bold text-stone-800">Like What You See?</h2>
             <p class="text-stone-600 mt-4">Learn more about me or reach out.</p>
             <div class="mt-6 flex justify-center space-x-6">
-                <!-- Email Icon -->
-                <!-- <a href="mailto:naomi@example.com" class="text-orange-500 hover:text-orange-600" aria-label="Email">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M16 12l-4-4m0 0l-4 4m4-4v12m-8 0h16a2 2 0 002-2V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                </a> -->
+
                 <a href="https://www.linkedin.com/in/naomiserkez" aria-label="LinkedIn"
                     class="text-orange-500 hover:text-orange-600">
                     <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="-143 145 512 512"
@@ -137,6 +197,17 @@
             <p>&copy; 2025 Naomi Serkez. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Get the specific link by its ID
+        const selfLink = document.getElementById("self-link");
+
+        selfLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevents the default link action
+            alert("You are already here, silly!");
+        });
+    </script>
+    
 </body>
 
 </html>
