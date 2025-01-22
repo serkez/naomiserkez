@@ -3,5 +3,6 @@
         "Hackathon",
         "Koena",
         "polyomino"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
